@@ -40,7 +40,7 @@ function loadAllPosts() {
 function displayPostsList(postsList, containerId) {
     const container = document.getElementById(containerId);
     
-    if (postsList.length === 0) {
+    if (!postsList || postsList.length === 0) {
         container.innerHTML = '<p>No posts yet. Start writing!</p>';
         return;
     }
@@ -95,7 +95,10 @@ function loadPost(postId) {
             
             // Trigger MathJax to render any math equations
             if (window.MathJax) {
-                MathJax.typesetPromise();
+                const postContent = contentDiv.querySelector('.post-content');
+                if (postContent) {
+                    MathJax.typesetPromise([postContent]);
+                }
             }
             
             // Scroll to top
