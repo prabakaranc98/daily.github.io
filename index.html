@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Writing & Reflections</title>
+    <link rel="stylesheet" href="style.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" integrity="sha256-9VLy9QDX6zd7w6MenN/N7wXjJjJGvPT8M8j0L5r8qaE=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Daily Writing & Reflections</h1>
+            <p class="tagline">My journey of thoughts, learnings, and daily reflections</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="#" onclick="loadHome(); return false;">Home</a>
+            <a href="#" onclick="loadAllPosts(); return false;">All Posts</a>
+            <a href="#about" onclick="loadAbout(); return false;">About</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div id="content">
+            <section id="recent-posts">
+                <h2>Recent Posts</h2>
+                <div id="posts-list"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Daily Writing & Reflections. Hosted on GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <script src="posts-index.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
