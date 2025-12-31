@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TITLE — A daily reflection.">
+
+    <!-- ================================================
+       POST TEMPLATE
+       
+       How to use:
+       1. Copy this file
+       2. Rename it with today's date: YYYY-MM-DD.html
+       3. Update the <title> and meta description
+       4. Fill in the post header (date, title, tags)
+       5. Write your content in the post-content section
+       6. Update index.html with a link to this post
+       7. Commit and push!
+       
+       Supported content:
+       - Regular text with <p> tags
+       - Headings with <h2> and <h3>
+       - Blockquotes with <blockquote>
+       - Lists with <ul>/<ol>
+       - Code with <code> and <pre>
+       - Images with <img> or <figure>
+       - Equations with $$ (block) or \( \) (inline)
+       - Section breaks with <hr>
+       ================================================ -->
+
+    <title>TITLE — Daily by Pracha.Me</title>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RWXXD2HWYN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-RWXXD2HWYN');
+    </script>
+
+    <!-- MathJax for equations -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['$$', '$$']],
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body class="post-page">
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <header class="masthead">
+                <a href="../index.html" class="masthead-title">Daily</a>
+                <div class="masthead-line"></div>
+                <p class="masthead-tagline">by <a href="https://pracha.me" class="author-link" target="_blank"
+                        rel="noopener">Pracha.Me</a></p>
+            </header>
+
+            <nav class="sidebar-nav">
+                <a href="../index.html" class="nav-item">Index</a>
+                <a href="../archive.html" class="nav-item">Archive</a>
+                <a href="https://pracha.me" class="nav-item" target="_blank" rel="noopener">About ↗</a>
+            </nav>
+
+            <section class="sidebar-section">
+                <h3 class="sidebar-heading">Topics</h3>
+                <div class="tags-list">
+                    <a href="#" class="tag">reflections</a>
+                    <a href="#" class="tag">learnings</a>
+                    <a href="#" class="tag">code</a>
+                    <a href="#" class="tag">thoughts</a>
+                    <a href="#" class="tag">math</a>
+                    <a href="#" class="tag">reading</a>
+                </div>
+            </section>
+
+            <footer class="sidebar-footer">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="icon-moon">☽</span>
+                    <span class="icon-sun">☼</span>
+                </button>
+                <span class="copyright">© 2024</span>
+            </footer>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <a href="../index.html" class="back-link">← Back to Index</a>
+
+            <article>
+                <!-- Post Header -->
+                <header class="post-header">
+                    <!-- Optional: Entry number like "No. 001" -->
+                    <div class="post-number">No. 001</div>
+
+                    <!-- Full date -->
+                    <time class="post-date-full" datetime="YYYY-MM-DD">Month DD, YYYY</time>
+
+                    <!-- Post title -->
+                    <h1 class="post-title">Your Title Here</h1>
+
+                    <!-- Tags -->
+                    <div class="post-tags">
+                        <a href="#" class="tag">tag1</a>
+                        <a href="#" class="tag">tag2</a>
+                    </div>
+                </header>
+
+                <!-- Post Content -->
+                <div class="post-content">
+
+                    <!-- Lead paragraph (will have drop cap) -->
+                    <p>
+                        This is the opening paragraph of your entry. The first letter
+                        will automatically become a decorative drop cap. Write something
+                        that draws the reader in.
+                    </p>
+
+                    <p>
+                        Continue your thoughts here. This template supports rich formatting
+                        including <strong>bold text</strong>, <em>italics</em>, and
+                        <a href="#">links</a>.
+                    </p>
+
+                    <!-- Section heading -->
+                    <h2>Section Title</h2>
+
+                    <p>
+                        Begin a new section with your thoughts. Use headings to organize
+                        longer entries into digestible sections.
+                    </p>
+
+                    <!-- Blockquote -->
+                    <blockquote>
+                        <p>
+                            A quote that resonated with you today, or a passage from
+                            something you read.
+                        </p>
+                        <cite>Author Name</cite>
+                    </blockquote>
+
+                    <!-- Sub-heading -->
+                    <h3>A Subsection</h3>
+
+                    <p>
+                        More detailed thoughts or a specific point you want to explore.
+                    </p>
+
+                    <!-- List -->
+                    <ul>
+                        <li>First observation or learning</li>
+                        <li>Second point to remember</li>
+                        <li>Third insight gained</li>
+                    </ul>
+
+                    <!-- Section break -->
+                    <hr>
+
+                    <!-- Another section -->
+                    <h2>Code & Technical Notes</h2>
+
+                    <p>
+                        If you're writing about code, use inline code like <code>const x = 42</code>
+                        or code blocks:
+                    </p>
+
+                    <pre><code>function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet('World'));</code></pre>
+
+                    <h2>Mathematics</h2>
+
+                    <p>
+                        For inline math, use \(\LaTeX\) syntax: The equation \(E = mc^2\)
+                        demonstrates mass-energy equivalence.
+                    </p>
+
+                    <p>
+                        For block equations, use double dollar signs:
+                    </p>
+
+                    $$
+                    \int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+                    $$
+
+                    <h2>Images & Media</h2>
+
+                    <p>
+                        Add images from the assets folder:
+                    </p>
+
+                    <!-- Basic image -->
+                    <!-- <img src="../assets/images/your-image.jpg" alt="Description"> -->
+
+                    <!-- Image with caption -->
+                    <!--
+          <figure>
+            <img src="../assets/images/your-image.jpg" alt="Description">
+            <figcaption>Caption describing the image</figcaption>
+          </figure>
+          -->
+
+                    <!-- GIFs work the same way -->
+                    <!-- <img src="../assets/images/animation.gif" alt="Animated demonstration"> -->
+
+                    <hr>
+
+                    <!-- Closing thoughts -->
+                    <p>
+                        End with a reflection, a question to ponder, or simply a note
+                        about how the day felt. These daily entries become a record of
+                        your journey through time.
+                    </p>
+
+                </div>
+
+                <!-- Post Footer -->
+                <footer class="post-footer">
+                    <div class="post-end-mark">∎</div>
+
+                    <!-- Navigation to prev/next posts (optional) -->
+                    <!--
+          <nav class="post-nav">
+            <a href="YYYY-MM-DD.html" class="post-nav-link post-nav-link--prev">
+              <span class="post-nav-label">← Previous</span>
+              <span class="post-nav-title">Previous Post Title</span>
+            </a>
+            <a href="YYYY-MM-DD.html" class="post-nav-link post-nav-link--next">
+              <span class="post-nav-label">Next →</span>
+              <span class="post-nav-title">Next Post Title</span>
+            </a>
+          </nav>
+          -->
+                </footer>
+            </article>
+        </main>
+    </div>
+
+    <script>
+        // Theme Toggle
+        const toggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        const saved = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', saved);
+
+        toggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+    </script>
+</body>
+
+</html>
