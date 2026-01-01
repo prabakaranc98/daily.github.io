@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A Clear-Eyed Roadmap to Applied AI and ML Engineering — Cutting through the hype to focus on what actually matters for career transitions.">
+
+    <title>A Clear-Eyed Roadmap to Applied AI and ML Engineering in 2026 (Part 1) — Daily by Pracha.Me</title>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RWXXD2HWYN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-RWXXD2HWYN');
+    </script>
+
+    <!-- MathJax for equations -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['$$', '$$']],
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body class="post-page">
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <header class="masthead">
+                <a href="../index.html" class="masthead-title">Daily</a>
+                <div class="masthead-line"></div>
+                <p class="masthead-tagline">by <a href="https://pracha.me" class="author-link" target="_blank"
+                        rel="noopener">Pracha.Me</a></p>
+            </header>
+
+            <nav class="sidebar-nav">
+                <a href="../index.html" class="nav-item">Index</a>
+                <a href="../archive.html" class="nav-item">Archive</a>
+                <a href="https://pracha.me" class="nav-item" target="_blank" rel="noopener">About ↗</a>
+            </nav>
+
+            <section class="sidebar-section">
+                <h3 class="sidebar-heading">Topics</h3>
+                <div class="tags-list">
+                    <a href="#" class="tag">reflections</a>
+                    <a href="#" class="tag">learnings</a>
+                    <a href="#" class="tag">code</a>
+                    <a href="#" class="tag">thoughts</a>
+                    <a href="#" class="tag">math</a>
+                    <a href="#" class="tag">reading</a>
+                </div>
+            </section>
+
+            <footer class="sidebar-footer">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="icon-moon">☽</span>
+                    <span class="icon-sun">☼</span>
+                </button>
+                <span class="copyright">© 2025</span>
+            </footer>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <a href="../index.html" class="back-link">← Back to Index</a>
+
+            <article>
+                <header class="post-header">
+                    <div class="post-number">No. 002</div>
+                    <time class="post-date-full" datetime="2026-01-01">January 1, 2026</time>
+                    <h1 class="post-title">A Clear-Eyed Roadmap to Applied AI and ML Engineering in 2026 (Part 1)</h1>
+                    <p style="font-style: italic; color: var(--ink-secondary); margin-top: var(--space-2);">Part 1 —
+                        Cutting Through the Noise</p>
+                    <div class="post-tags">
+                        <a href="#" class="tag">applied-ai</a>
+                        <a href="#" class="tag">roadmap</a>
+                        <a href="#" class="tag">career</a>
+                        <a href="#" class="tag">engineering</a>
+                    </div>
+                </header>
+
+                <div class="post-content">
+
+                    <p>
+                        This is January 1st, 2026. I'm writing this after DeepSeek published their Manifold Constrained
+                        Hyperconnections paper—a new architectural innovation. I've been trying to capture and
+                        understand
+                        different architectural patterns and their evolution, but that's a long-term project for this
+                        semester.
+                        I don't want to jump directly into that because there's an earlier paper called Hyperconnection
+                        with
+                        very few citations, but that's where this work originated. If you look at the original
+                        "Attention Is
+                        All You Need" paper, the transformer architecture itself has evolved tremendously since then.
+                    </p>
+
+                    <p>
+                        But here's why I want to talk about something different in this blog. Most readers—whether from
+                        India,
+                        the US, or anywhere else—who want to transition into AI face a specific reality. If I'm being
+                        conservative, <strong>90% of the jobs and opportunities are in applied AI and applied ML
+                            engineering</strong>.
+                        That's the field most people are interested in, and most of them are in college, universities,
+                        or early
+                        in their careers looking for clarity on how to approach this space.
+                    </p>
+
+                    <p>
+                        I want to connect this from different angles: what industries and problem statements actually
+                        require,
+                        the profiles and skill sets and mindsets needed, and practical guidance for people who want to
+                        transition
+                        or get started. I'm deliberately not centering this roadmap around papers and architectural
+                        deep-dives.
+                        I've watched too many people follow that path and end up disappointed—either they never develop
+                        genuine
+                        interest in a specific area, or they become hyper-distracted every time a new paper drops.
+                    </p>
+
+                    <hr>
+
+                    <h2>The Paper Hype Cycle</h2>
+
+                    <p>
+                        Here's what happens: DeepSeek launches a paper, and people on Twitter start discussing it.
+                        Researchers
+                        engage with it seriously. People fascinated by research jump in. Then content curators and
+                        influencers
+                        say "DeepSeek dropped the bomb" and so on. This spreads to LinkedIn, where information diffusion
+                        comes
+                        from high-engagement accounts—DevRel people, product marketers—who post things like <em>"Top
+                            five papers
+                            you need to read to stay in AI in 2026."</em>
+                    </p>
+
+                    <p>
+                        <strong>I'm cutting through that noise.</strong> If you already know your path, skip ahead. But
+                        if you
+                        need clarity, I'm going to dissect all of this in detail.
+                    </p>
+
+                    <p>
+                        After 2023, the term "applied AI" added necessary context and clarity for people who want to
+                        learn and
+                        build. Both research and real-world applications are moving at high speed. They differ in
+                        magnitude, but
+                        the rate of change—both in academic and industrial research—is higher than the COVID or
+                        pre-COVID era.
+                        The distinction between applied AI and AI research needs to be properly drawn. This blog is for
+                        students,
+                        professionals, beginners, and people waiting for the perfect transition moment. It focuses on
+                        applied
+                        AI—and I include "applied ML" because there's good reason to treat them together, which I'll get
+                        into.
+                    </p>
+
+                    <hr>
+
+                    <h2>Where Is Applied AI Actually Being Used?</h2>
+
+                    <p>
+                        What kind of work qualifies as applied AI, and what companies or teams are doing it? With
+                        foundation
+                        models now available—GPT, Gemini, Claude, Opus, Grok, and open-source models like DeepSeek,
+                        Llama, Kimi,
+                        and Qwen—companies can automate many tasks. Reviewing Jira tickets, assigning them, automating
+                        customer
+                        queries, extracting data, generating insights from massive document sets, helping people answer
+                        questions
+                        from those documents. The list goes on.
+                    </p>
+
+                    <p>
+                        Agentic AI is essentially an adapter between raw models and real-world problem solving. I don't
+                        particularly like the term "agentic AI"—last year people kept insisting AI agents are different
+                        from
+                        agentic AI. They're not. <strong>Agent or agentic simply means operationalizing models to do
+                            something,
+                            to behave or act in a certain way.</strong> Keep it simple. Any automation, operations, or
+                        decision-making problem can now be approached with foundation models. It can involve agents as
+                        an
+                        operational layer, or something more straightforward.
+                    </p>
+
+                    <p>
+                        Some critics say agents are just AI-infused workflows—fine, but every frontier lab is calling
+                        this agent
+                        or agentic research to develop the methodologies and systems. Don't get half-hearted about the
+                        terminology. Applied AI is about building this operationalization or application layer to solve
+                        real-world problems.
+                    </p>
+
+                    <hr>
+
+                    <h2>The Company Landscape</h2>
+
+                    <p>
+                        Consider any size or type of company—because that's where you want to work. Everyone starts with
+                        wanting
+                        to work at FAANG or MAANG companies. But these companies don't just do research and sell
+                        products. They
+                        have their own products with massive problem spaces. Facebook, Amazon, Microsoft, Netflix. In
+                        India,
+                        think Microsoft, Databricks, Qualcomm, Jio, Disney Plus Hotstar, LinkedIn, Google, Amazon. Tech
+                        product
+                        companies either provide enterprise solutions or consumer digital products. That's their core
+                        business.
+                        And in running that business, they face countless problems: customer-facing issues,
+                        infrastructure
+                        challenges, building and maintaining platforms with thousands of engineers.
+                    </p>
+
+                    <p>
+                        From resolving customer queries to assisting users with incentives, automations, and
+                        notifications—to
+                        making products easier to use, handling deployments, writing and maintaining code—every step has
+                        its own
+                        problem space. When systems and humans interact, problems emerge: we want to improve efficiency,
+                        increase
+                        productivity, reduce costs, enhance user experience. That's the blanket of problem spaces.
+                    </p>
+
+                    <blockquote>
+                        <p>
+                            You can't just drop a model somewhere and expect it to work. You need good systems, better
+                            workflows,
+                            better approaches.
+                        </p>
+                    </blockquote>
+
+                    <p>
+                        Even companies doing core research—Anthropic, OpenAI, Meta, Microsoft AI, or in India companies
+                        like
+                        Salesforce's AI wing, Intuit's AI research team—still have this split. Core AI research is one
+                        thing.
+                        But <strong>70-80% of efforts typically focus on other problems</strong> that keep the business
+                        running
+                        efficiently and profitably. Wherever problems exist, wherever possibilities emerge, we build
+                        solutions
+                        with AI in place. That's where the demand for people who can solve problems by applying AI is
+                        highest.
+                        Applied AI engineers, AI engineers, ML engineers—that's what everyone wants to become, and
+                        that's where
+                        most opportunities exist right now.
+                    </p>
+
+                    <hr>
+
+                    <h2>Beyond Big Tech</h2>
+
+                    <p>
+                        Beyond major tech companies, consider product companies like Swiggy, Zomato, or early-stage
+                        startups—Y
+                        Combinator companies building on AI. I know one startup doing debt collection using AI. Debt
+                        collection
+                        is the core problem; AI brings efficiency and better solutions. Another company builds learning
+                        platforms
+                        for enterprises, accelerated by AI. Same pattern with product marketing video startups, or
+                        companies like
+                        Cred and PhonePe. They might have 100 problems, with maybe 25 getting direct AI solutions. For
+                        other
+                        problems, they might use AI in development workflows—AI-assisted coding, for instance—but
+                        they'll buy
+                        those solutions rather than build them.
+                    </p>
+
+                    <p>
+                        This distinction matters: with applied AI, problems can be addressed by building solutions or
+                        buying
+                        them. Some companies build AI-based products so others can use them. Consider SupportLogic or
+                        Glean.
+                        SupportLogic offers enterprise-level customer support solutions. Glean does enterprise search.
+                        Both are
+                        AI-centric platforms you can connect to existing systems and use directly—off-the-shelf AI
+                        solutions.
+                        Companies might not want to build from scratch. But many problem statements require in-house
+                        solutions,
+                        so every company has some in-house AI problem-solving activity.
+                    </p>
+
+                    <hr>
+
+                    <h2>What's Changed</h2>
+
+                    <p>
+                        Here's what's changed: training models for weeks, creating new architectures, heavy
+                        fine-tuning—all of
+                        that has reduced significantly. When I worked at Informatica, we did training and fine-tuning
+                        extensively,
+                        but that's shifted toward using agents and building AI-infused workflows. What a company does
+                        with AI
+                        depends on their strategic bet.
+                    </p>
+
+                    <p>
+                        I helped a startup where the bet itself was having their own model—a domain-specific model with
+                        perfect
+                        alignment for solving legal domain problems. There's no off-the-shelf model specifically good at
+                        Indian
+                        law. Even if one existed, this company wanted to compete in that arena. Whether to buy, build,
+                        or compete
+                        depends on company objectives.
+                    </p>
+
+                    <hr>
+
+                    <h2>The Core Skills for Applied AI</h2>
+
+                    <p>
+                        Let me walk through the roadmap based on these companies and patterns, then summarize what's
+                        essential
+                        for people entering the field. Start with scenarios where companies build agentic solutions
+                        using
+                        enterprise offerings from OpenAI APIs. One segment of problems can be solved with agents and
+                        APIs. But
+                        this involves building systems. You might think: for this we just need Python, LangGraph, some
+                        coding,
+                        some RAG.
+                    </p>
+
+                    <p>
+                        The current agent AI or AI engineering stack does default to RAG and its systems—retrievers, AI
+                        APIs,
+                        orchestration, agents with different skills, and context management.
+                    </p>
+
+                    <h3>From Reactive to Proactive Agents</h3>
+
+                    <p>
+                        Initially, agents were reactive—answer as soon as possible. Ask a question, fetch something,
+                        respond.
+                        Now agents work on your behalf, running background tasks asynchronously rather than
+                        synchronously. Every
+                        user group in a product wants a co-pilot or agent doing work in the background. Simple function
+                        execution—three or four steps and an answer—is something we've moved past. Agents need to run
+                        for
+                        extended periods, handling series of tasks based on context, instructions, and setup. They run
+                        in
+                        environments handling multiple considerations and rules—think of it like a robot.
+                    </p>
+
+                    <p>
+                        For example, every night an agent goes through all open tickets, does priority checks, basic
+                        sanity
+                        checks, and takes initial steps. Instead of just giving you a report, it's done actual work.
+                        <em>"I fixed the least priority items because they were simple—configured and changed them.
+                            Ready for
+                            your review. Here's the report, you just sign off."</em> This involves orchestrating all the
+                        logic,
+                        handling AI API keys, dealing with context from different locations—databases, documents,
+                        folders. You
+                        can't dump everything into one vector database.
+                    </p>
+
+                    <hr>
+
+                    <h2>A Real-World Example: Customer Presentations</h2>
+
+                    <p>
+                        Consider automating customer presentations. Customer purchase and subscription usage data sits
+                        in
+                        Databricks. Customer support tickets and sentiment data are in Salesforce, extracted and saved
+                        in a
+                        vector database or document storage. To get six months of support tickets, you first query a
+                        relational
+                        or document database, then infuse it into a vector DB for on-demand querying. Enterprise
+                        databases become
+                        long-term record-keeping systems. You extract specific chunks—this customer, these dates—and
+                        load them
+                        into vector databases for querying.
+                    </p>
+
+                    <p>
+                        The vector database might be BM25, hybrid, or graph-based. But for trends or time-series
+                        information,
+                        that can't be stored in vectors—you retrieve from enterprise data warehouses. Enterprise-level
+                        problems
+                        are mature problems with retrieval of information, grounding on that information with conditions
+                        or
+                        constraints, generating outputs or taking actions.
+                    </p>
+
+                    <p>
+                        Going back to the presentation example: data from different sources, a specific style of doing
+                        things,
+                        multiple steps—initial draft, validation, second draft. <strong>The fundamental skill is
+                            orchestrating
+                            these things with code.</strong> The second skill is keeping that orchestration running
+                        without
+                        disturbance, because it's deployed somewhere. One is scripting the orchestration. Another is
+                        running it
+                        reliably. Both become critical—and difficult—as you handle multi-step problems.
+                    </p>
+
+                    <p>
+                        Some might need just two steps. Some might take hours to analyze. Consider medical reporting
+                        where an
+                        insurance company dumps thousands of pages. Analyzing and finding relevant evidence might take
+                        hours with
+                        existing systems. How does the workflow stay alive? How does it run all the way through?
+                    </p>
+
+                    <hr>
+
+                    <h2>The Essential Skills</h2>
+
+                    <p>
+                        For skills: learn Python, learn frameworks to build sandboxes—environments where AI can tackle
+                        lengthy
+                        problems. Learn to build agents that can handle context when needed, with context available in
+                        different
+                        places. Make the model decide: this is the point where we need context or need actions taken,
+                        need to
+                        check somewhere. Develop playbooks and skills—prompts. Then collect data and retrieve
+                        information from
+                        wherever possible. That's tool calling.
+                    </p>
+
+                    <h3>MCP and Tool Calling</h3>
+
+                    <p>
+                        Now we have MCP servers so you don't build critical connectors yourself. MCP bridges both ends:
+                        the agent
+                        knows what information it needs and which query or API call to make; that connects to code or
+                        API that
+                        actually fetches the data. Multiple agents can use this effectively without writing connector
+                        code for
+                        every agent.
+                    </p>
+
+                    <p>
+                        The agent must understand the problem, recognize the 10 or 20 steps, and know what information
+                        is needed
+                        for each step. It must know where information lives, how to get it, whether to use a tool.
+                        That's tool
+                        calling—making agents decide what to call, when to call, how to fetch, how to use.
+                    </p>
+
+                    <h3>Frameworks: Don't Overthink It</h3>
+
+                    <p>
+                        Learn one framework well. Don't confuse yourself with "I need to learn LangGraph, Crew,
+                        something else."
+                        Take any SDK from Google's Agent Development Kit or OpenAI's agents SDK. Or take a universal
+                        framework
+                        like LangGraph or Crew AI. Learn one or two. These are functions you can reference from
+                        documentation
+                        when needed. What you need are patterns and different situations.
+                    </p>
+
+                    <hr>
+
+                    <h2>Multi-Agent Systems and Sandboxing</h2>
+
+                    <p>
+                        Do these problems need only one agent? Often they need teams of agents with coordination, roles,
+                        and
+                        responsibilities. That's multi-agent systems. One agent might do planning, another does review
+                        work.
+                        Within a sandbox, multiple agents work together.
+                    </p>
+
+                    <p>
+                        Why sandbox? It's a specific isolated environment. Tens or hundreds of users can't just queue up
+                        hitting
+                        the same application. The sandbox provides customization and personalization—users access their
+                        own
+                        systems, their own specifications, upload documents. Everything stays within that isolated
+                        environment,
+                        sitting on the server without disturbing other problems.
+                    </p>
+
+                    <p>
+                        Imagine an agent factory doing multiple things. One agent handles productivity tasks. Another
+                        drafts
+                        marketing emails. Others help prepare keynote presentations, finance meetings,
+                        cross-verifications,
+                        audits. All these agent teams need different rules, configurations, and access. That's why you
+                        need to
+                        understand sandboxing. Check out open sandbox frameworks, or Modal's sandboxing, or Kubernetes
+                        approaches.
+                        You can build your own sandbox—that's core software engineering involving networking and
+                        resource
+                        isolation. There's something called gVisor. I'm not suggesting you need to learn gVisor, just
+                        showing how
+                        things work.
+                    </p>
+
+                    <hr>
+
+                    <h2>Evaluations: The Critical Missing Piece</h2>
+
+                    <p>
+                        That's development. But there's another crucial piece: <strong>making models and agents
+                            trustable through
+                            full evaluations</strong>. Any company or team working on AI problems must focus on
+                        meaningful
+                        orchestration and validation. Without validation, you can't know if orchestration works.
+                    </p>
+
+                    <p>
+                        This isn't typical machine learning where someone hands you test data and asks for F1 scores. ML
+                        here is
+                        completely experimental. You must deep-dive into where models make right decisions, take correct
+                        turns,
+                        use right tools. Start by determining what factors to evaluate, design evaluation frameworks and
+                        metrics,
+                        devise plans for collecting data—maybe operations teams or business stakeholders do benchmarking
+                        and
+                        scoring.
+                    </p>
+
+                    <h3>Building Evaluation Pipelines</h3>
+
+                    <p>
+                        Build evaluation pipelines. Take traces and logs of agents—starting point, intermediate results,
+                        final
+                        result—the complete journey. Feed that to evaluation metrics built with statistics, heuristics,
+                        and AI
+                        workflows. That's where AI-as-judges and LLMs-as-judges come in. Validating that 90% of the time
+                        the
+                        agent performed well based on metric acceptance is like functional testing or user acceptance
+                        testing.
+                        That's the lifecycle.
+                    </p>
+
+                    <p>
+                        Deployment is typical—Docker, Kubernetes, whatever works from a software engineering and DevOps
+                        perspective. People call it LLMOps. Don't stress about deployment; you can figure that out.
+                    </p>
+
+                    <blockquote>
+                        <p>
+                            The two major skills are: translating vague business problems into orchestratable systems,
+                            and
+                            building evaluations.
+                        </p>
+                    </blockquote>
+
+                    <p>
+                        Most situations don't let you say "user gives this, you do that, give output." You need
+                        extensive
+                        prompting, evaluation, testing to find patterns that work.
+                    </p>
+
+                    <hr>
+
+                    <h2>The Nuances of Real Problems</h2>
+
+                    <p>
+                        Your agent might need to prioritize recent comments or issues. You figure out these nuances
+                        while
+                        understanding the problem, then encode them in prompts and logic. Your agent might need to run
+                        code—you
+                        need compiler or code execution tools. Your agent might access UI elements—you might need
+                        open-source
+                        solutions or custom tools for LLMs to cross-verify or do UI tasks. There's a term "ambient
+                        agents"—agents
+                        working in background doing series of tasks.
+                    </p>
+
+                    <h3>Domain-Specific Considerations</h3>
+
+                    <p>
+                        In domain-specific industries, you might need better retrievers. Models must understand unique
+                        codes and
+                        terminologies. For a pharmaceutical company, documents and inputs might be highly specialized.
+                        You might
+                        bet on better retrievers or develop one yourself. There are rerankers too. Check Hugging Face
+                        for
+                        transformers, sentence transformers, retrievers, reranking models. This supports LLMs getting
+                        right
+                        context. Learn when to use single-vector retrievers versus multi-vector retrievers.
+                    </p>
+
+                    <p>
+                        For observability—tools like Langfuse—if your situation demands tracing, figure it out. It's
+                        just a
+                        framework collecting traces. There's no deep concept. Focus on orchestration and right patterns.
+                        You can
+                        deep-dive into retrieval, but in real companies you won't just focus on retrieval alone—you'll
+                        deal with
+                        rerankers, variation handling, dividing retrieval tasks.
+                    </p>
+
+                    <hr>
+
+                    <h2>Evaluations Deserve Serious Focus</h2>
+
+                    <p>
+                        Evaluations deserve serious focus. Critical problems need right evaluation. To build these skill
+                        modules,
+                        come up with your own problem statements. Find them yourself, build them as side projects, learn
+                        by doing.
+                        Don't just follow books.
+                    </p>
+
+                    <p>
+                        <strong>Follow the Agentic AI course from Berkeley RDI</strong>—it's excellent and open source.
+                        It covers
+                        nuances without telling you which specific framework or tech to learn. It teaches patterns and
+                        situations.
+                        For instance, handling situations where agents must prioritize recent comments, or where agents
+                        need code
+                        execution or UI access. You play with prompts and logic.
+                    </p>
+
+                    <p>
+                        Over time you'll develop these skills. The key is understanding problems and evolving solutions
+                        from
+                        there. There's no scientific theory to follow. Learn from engineering blogs of companies—see how
+                        they
+                        manage context, handle long-running agents, implement simple routing logic. Routing is
+                        orchestrating
+                        which agent handles which problem first. You have multiple agent teams; you need to route
+                        problems
+                        appropriately.
+                    </p>
+
+                    <hr>
+
+                    <h2>A Holistic Overview</h2>
+
+                    <p>
+                        This is a holistic overview. If you want to focus on one specific thing, that's fine—keep it as
+                        a side
+                        project. In industry and enterprises, teams won't have you work on just one narrow thing like
+                        routing
+                        only. You work on entire setups: converting business problems into orchestratable systems,
+                        providing
+                        decision logic for every node and step, specifying where data gets fetched, what tools are
+                        available,
+                        what rules and intermediate checks apply, how to pass results along. Strong evals are essential.
+                    </p>
+
+                    <p style="text-align: center; font-size: var(--fs-lg); font-weight: 500; color: var(--accent);">
+                        Develop → Evaluate → Deploy. That's the cycle.
+                    </p>
+
+                    <p>
+                        For this, follow the Agentic AI course from Berkeley. Berkeley RDI launched an excellent
+                        open-source
+                        course covering all these nuances without prescribing specific frameworks. You learn patterns
+                        and
+                        situations. Over time, you evolve.
+                    </p>
+
+                    <hr>
+
+                    <h2>Key Takeaways</h2>
+
+                    <ul>
+                        <li><strong>90% of AI opportunities are in applied AI/ML engineering</strong>—not research</li>
+                        <li><strong>Don't chase papers</strong>—focus on building orchestration skills</li>
+                        <li><strong>Learn one framework well</strong>—LangGraph, Crew AI, or any agent SDK</li>
+                        <li><strong>Master tool calling and context management</strong>—where data lives, how to
+                            retrieve it</li>
+                        <li><strong>Understand sandboxing</strong>—isolated environments for multi-user, multi-agent
+                            systems</li>
+                        <li><strong>Build evaluation pipelines</strong>—LLM-as-judge, traces, and metrics are essential
+                        </li>
+                        <li><strong>Translate vague problems into orchestratable systems</strong>—this is the core skill
+                        </li>
+                        <li><strong>Learn by building side projects</strong>—don't just read books</li>
+                        <li><strong>Follow Berkeley RDI's Agentic AI course</strong>—it teaches patterns, not just tools
+                        </li>
+                    </ul>
+
+                    <hr>
+
+                    <p>
+                        This roadmap is Part 1 of a series. In upcoming posts, I'll dive deeper into specific areas:
+                        retrieval
+                        systems, evaluation frameworks, and the practical nuances of deploying agents in production.
+                        Stay tuned.
+                    </p>
+
+                </div>
+
+                <footer class="post-footer">
+                    <p style="text-align: right; font-style: italic; color: var(--ink-secondary);">
+                        — Prabakaran Chandran<br>
+                        January 1st, 2026
+                    </p>
+                    <div class="post-end-mark">∎</div>
+                </footer>
+            </article>
+        </main>
+    </div>
+
+    <script>
+        const toggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        const saved = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', saved);
+
+        toggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+    </script>
+
+</body>
+
+</html>
