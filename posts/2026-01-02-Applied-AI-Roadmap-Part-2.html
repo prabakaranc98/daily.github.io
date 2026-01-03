@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A Clear-Eyed Roadmap to Applied AI and ML Engineering in 2026 (Part 2) — Vertical adoption, domain-specific models, and owning the intelligence.">
+
+    <title>A Clear-Eyed Roadmap to Applied AI and ML Engineering in 2026 (Part 2) — Daily by Pracha.Me</title>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RWXXD2HWYN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-RWXXD2HWYN');
+    </script>
+
+    <!-- MathJax for equations -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['$$', '$$']],
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body class="post-page">
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <header class="masthead">
+                <a href="../index.html" class="masthead-title">Daily</a>
+                <div class="masthead-line"></div>
+                <p class="masthead-tagline">by <a href="https://pracha.me" class="author-link" target="_blank"
+                        rel="noopener">Pracha.Me</a></p>
+            </header>
+
+            <nav class="sidebar-nav">
+                <a href="../index.html" class="nav-item">Index</a>
+                <a href="../archive.html" class="nav-item">Archive</a>
+                <a href="https://pracha.me" class="nav-item" target="_blank" rel="noopener">About ↗</a>
+            </nav>
+
+            <section class="sidebar-section">
+                <h3 class="sidebar-heading">Topics</h3>
+                <div class="tags-list">
+                    <a href="#" class="tag">reflections</a>
+                    <a href="#" class="tag">learnings</a>
+                    <a href="#" class="tag">code</a>
+                    <a href="#" class="tag">thoughts</a>
+                    <a href="#" class="tag">math</a>
+                    <a href="#" class="tag">reading</a>
+                </div>
+            </section>
+
+            <footer class="sidebar-footer">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="icon-moon">☽</span>
+                    <span class="icon-sun">☼</span>
+                </button>
+                <span class="copyright">© 2026</span>
+            </footer>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <a href="../index.html" class="back-link">← Back to Index</a>
+
+            <article>
+                <header class="post-header">
+                    <div class="post-number">No. 003</div>
+                    <time class="post-date-full" datetime="2026-01-02">January 2, 2026</time>
+                    <h1 class="post-title">A Clear-Eyed Roadmap to Applied AI and ML Engineering in 2026 (Part 2)</h1>
+                    <p style="font-style: italic; color: var(--ink-secondary); margin-top: var(--space-2);">Part 2 —
+                        Owning the Intelligence and the Algorithm</p>
+                    <div class="post-tags">
+                        <a href="#" class="tag">applied-ai</a>
+                        <a href="#" class="tag">applied-ml</a>
+                        <a href="#" class="tag">roadmap</a>
+                        <a href="#" class="tag">domain-models</a>
+                    </div>
+                </header>
+
+                <div class="post-content">
+
+                    <p>
+                        In <a href="2026-01-01-Applied-AI-Roadmap-Part-1.html">Part 1</a> of this series, we explored
+                        how agentic systems serve as an operational layer between foundational models and business
+                        outcomes. We examined patterns across industries and how these systems help companies automate
+                        tasks, analyze data, and solve complex problems through orchestrated workflows.
+                    </p>
+
+                    <p>
+                        A common question arises: <strong>Is applied AI exclusively about building agents?</strong> The
+                        answer is no. While agentic systems represent one significant opportunity, there exists another
+                        equally important dimension: <strong>vertical adoption through domain-specific models</strong>.
+                        This second pathway focuses on companies building and owning their own specialized AI
+                        capabilities rather than relying solely on general-purpose foundation models.
+                    </p>
+
+                    <hr>
+
+                    <h2>Agentic Systems vs. Vertical Adoption</h2>
+
+                    <p>
+                        Agentic systems excel in general-purpose domains such as mathematical reasoning, logical
+                        analysis, data interpretation, and code generation. These systems function as intelligent
+                        generalists, applying broad knowledge to solve common problems across various contexts.
+                    </p>
+
+                    <p>
+                        However, challenges emerge when companies operate in specialized verticals with unique
+                        requirements. Consider a healthcare organization with proprietary datasets, compliance
+                        constraints (such as HIPAA), and domain-specific workflows. In such cases, general-purpose
+                        models may not suffice. Companies face three primary motivations for developing custom models:
+                    </p>
+
+                    <ul>
+                        <li><strong>Intellectual Property Ownership</strong> — retaining full control over the model's
+                            intelligence and capabilities</li>
+                        <li><strong>Regulatory Compliance</strong> — meeting industry-specific regulations that general
+                            models cannot guarantee</li>
+                        <li><strong>Competitive Advantage</strong> — creating differentiated capabilities that
+                            competitors cannot easily replicate</li>
+                    </ul>
+
+                    <p>
+                        This represents a fundamental shift in strategy: from <em>"using intelligence"</em> to
+                        <em>"owning intelligence."</em> When organizations use general models like GPT or Claude, they
+                        own the application logic but not the underlying intelligence. Custom models enable complete
+                        ownership of the entire stack.
+                    </p>
+
+                    <hr>
+
+                    <h2>Companies Building Domain-Specific Models</h2>
+
+                    <p>
+                        Several companies exemplify this vertical adoption approach. Let's examine concrete examples:
+                    </p>
+
+                    <h3>Voice Intelligence</h3>
+                    <p>
+                        Companies like Smallest AI and ElevenLabs build specialized models for voice interaction. Rather
+                        than integrating third-party voice APIs, they develop proprietary models optimized for specific
+                        use cases—customer service, voice agents, or real-time conversation. This vertical integration
+                        allows them to:
+                    </p>
+                    <ul>
+                        <li>Optimize latency for real-time applications</li>
+                        <li>Reduce operational costs through efficient model design</li>
+                        <li>Maintain quality control across the entire pipeline</li>
+                        <li>Customize behavior for specific industry requirements</li>
+                    </ul>
+
+                    <h3>Healthcare Decision Support</h3>
+                    <p>
+                        In my previous work, we developed a custom model for medical document synthesis and healthcare
+                        decision support. The motivation extended beyond compliance—we needed domain expertise embedded
+                        directly into the model's weights. This approach ensures that the model understands medical
+                        terminology, clinical workflows, and evidence-based reasoning without requiring extensive prompt
+                        engineering for each query.
+                    </p>
+
+                    <hr>
+
+                    <h2>Applied Research vs. Fundamental Research</h2>
+
+                    <p>
+                        It is important to clarify expectations. Most organizations cannot conduct fundamental AI
+                        research—the development of entirely new architectures or pre-training models from scratch. This
+                        requires resources available primarily to large research laboratories and frontier AI companies.
+                    </p>
+
+                    <p>
+                        Instead, organizations engage in <strong>applied research</strong>, which involves:
+                    </p>
+
+                    <ul>
+                        <li><strong>Architecture Adaptation</strong> — selecting and modifying existing architectures
+                            (e.g., transformers, state-space models) for specific domains</li>
+                        <li><strong>Continued Pre-training</strong> — further training foundation models on
+                            domain-specific data</li>
+                        <li><strong>Fine-tuning</strong> — adapting pre-trained models to specific tasks with supervised
+                            or reinforcement learning</li>
+                        <li><strong>Alignment Training</strong> — using techniques like Direct Preference Optimization
+                            (DPO) or Group Relative Policy Optimization (GRPO) to align model behavior with desired
+                            outcomes</li>
+                    </ul>
+
+                    <blockquote>
+                        <p>
+                            Applied research requires deep understanding of architectures, training paradigms, dataset
+                            preparation, and evaluation methodologies. It is not merely following tutorials—it demands
+                            deliberate practice and domain expertise.
+                        </p>
+                    </blockquote>
+
+                    <p>
+                        Unlike the agentic systems work discussed in Part 1 (which emphasizes software engineering),
+                        vertical adoption demands <strong>machine learning expertise</strong>. Companies need
+                        professionals who understand training dynamics, can design experiments, and can iterate on model
+                        architectures.
+                    </p>
+
+                    <hr>
+
+                    <h2>Essential Skills for Domain-Specific AI</h2>
+
+                    <p>
+                        Building and deploying domain-specific models requires a distinct skill set. Let's break down
+                        the core competencies:
+                    </p>
+
+                    <h3>1. Understanding Modern Architectures</h3>
+                    <p>
+                        You should be familiar with:
+                    </p>
+                    <ul>
+                        <li><strong>Transformer models</strong> — the foundation of most modern language models (GPT,
+                            BERT, T5)</li>
+                        <li><strong>Vision-Language Models (VLMs)</strong> — architectures that process both images and
+                            text</li>
+                        <li><strong>State Space Models</strong> — emerging alternatives to transformers for certain
+                            applications</li>
+                        <li><strong>Mixture of Experts (MoE)</strong> — architectures that activate different
+                            sub-networks for different inputs</li>
+                        <li><strong>Specialized Encoders/Decoders</strong> — for audio, video, or other modalities</li>
+                    </ul>
+
+                    <h3>2. Training Paradigms</h3>
+                    <p>
+                        Understanding when and how to apply different training approaches:
+                    </p>
+                    <ul>
+                        <li><strong>Full Fine-tuning</strong> — updating all model parameters (requires significant
+                            computational resources)</li>
+                        <li><strong>Parameter-Efficient Fine-Tuning (PEFT)</strong> — techniques like LoRA or QLoRA that
+                            update only a fraction of parameters</li>
+                        <li><strong>Continual Pre-training</strong> — extending a foundation model's knowledge with
+                            domain-specific data</li>
+                        <li><strong>Alignment Training</strong> — teaching models to follow instructions and align with
+                            human preferences</li>
+                    </ul>
+
+                    <h3>3. Data Preparation and Curation</h3>
+                    <p>
+                        The quality of your model depends fundamentally on your data. This includes:
+                    </p>
+                    <ul>
+                        <li>Collecting relevant domain-specific datasets</li>
+                        <li>Cleaning and preprocessing data appropriately</li>
+                        <li>Creating high-quality training examples</li>
+                        <li>Balancing datasets to avoid bias</li>
+                        <li>Versioning and managing data pipelines</li>
+                    </ul>
+
+                    <hr>
+
+                    <h2>Two Career Paths: Training vs. Optimization</h2>
+
+                    <p>
+                        The field naturally divides into two complementary specializations. Most professionals will
+                        focus on one path, though some knowledge of both remains valuable.
+                    </p>
+
+                    <h3>Path 1: Training and Validation</h3>
+                    <p>
+                        This path focuses on:
+                    </p>
+                    <ul>
+                        <li>Designing and selecting appropriate architectures</li>
+                        <li>Preparing training datasets</li>
+                        <li>Running experiments and comparing approaches</li>
+                        <li>Evaluating model performance</li>
+                        <li>Iterating on model design based on results</li>
+                    </ul>
+
+                    <h3>Path 2: Scaling and Optimization</h3>
+                    <p>
+                        This path emphasizes:
+                    </p>
+                    <ul>
+                        <li>GPU optimization and efficient compute utilization</li>
+                        <li>Kernel optimization for specific operations</li>
+                        <li>Inference optimization (reducing latency and cost)</li>
+                        <li>Distributed training across multiple machines</li>
+                        <li>Model quantization and compression</li>
+                    </ul>
+
+                    <blockquote>
+                        <p>
+                            You do not need to master both paths simultaneously. Choose one as your primary focus, then
+                            expand your knowledge into the other area as needed.
+                        </p>
+                    </blockquote>
+
+                    <hr>
+
+                    <h2>Applied AI vs. Applied ML: A Critical Distinction</h2>
+
+                    <p>
+                        Understanding the difference between Applied AI and Applied ML helps clarify career
+                        opportunities and skill requirements.
+                    </p>
+
+                    <h3>Applied AI: Owning Intelligence</h3>
+                    <p>
+                        Applied AI involves building systems that exhibit human-like cognitive capabilities:
+                    </p>
+                    <ul>
+                        <li><strong>Understanding</strong> — comprehending user intent, context, and nuance</li>
+                        <li><strong>Reasoning</strong> — performing logical analysis and multi-step problem-solving</li>
+                        <li><strong>Generation</strong> — creating coherent text, images, or other content</li>
+                        <li><strong>Interaction</strong> — engaging in dialogue and adapting to user needs</li>
+                    </ul>
+
+                    <p>
+                        Examples include voice agents, chatbots, document synthesis systems, and creative AI tools.
+                        These systems aim to replicate or augment human intelligence for specific tasks.
+                    </p>
+
+                    <h3>Applied ML: Owning Algorithms</h3>
+                    <p>
+                        Applied ML focuses on developing algorithms for specific, well-defined tasks:
+                    </p>
+                    <ul>
+                        <li><strong>Prediction</strong> — forecasting demand, prices, weather, or other quantities</li>
+                        <li><strong>Classification</strong> — categorizing data into predefined groups</li>
+                        <li><strong>Recommendation</strong> — suggesting relevant items to users</li>
+                        <li><strong>Optimization</strong> — finding optimal solutions to constrained problems</li>
+                        <li><strong>Anomaly Detection</strong> — identifying unusual patterns in data</li>
+                    </ul>
+
+                    <p>
+                        These systems do not require human-level intelligence. Instead, they excel at specific
+                        algorithmic tasks through pattern recognition and mathematical optimization.
+                    </p>
+
+                    <blockquote>
+                        <p>
+                            Applied AI owns intelligence. Applied ML owns algorithms. Both use similar underlying
+                            technologies (neural networks, transformers), but serve different purposes.
+                        </p>
+                    </blockquote>
+
+                    <hr>
+
+                    <h2>Real-World Applications of Applied ML</h2>
+
+                    <p>
+                        Let's examine concrete examples to illustrate Applied ML in practice:
+                    </p>
+
+                    <h3>Recommendation Systems</h3>
+                    <p>
+                        Companies like Spotify or Netflix use sophisticated neural networks to encode user preferences
+                        and content features into latent spaces. These systems do not "understand" music or movies in a
+                        cognitive sense—they identify statistical patterns in user behavior and content characteristics
+                        to make predictions about what users might enjoy.
+                    </p>
+
+                    <h3>Quantitative Finance</h3>
+                    <p>
+                        Algorithmic trading systems use machine learning for alpha signal generation—identifying market
+                        opportunities likely to outperform average returns. These models analyze market dynamics,
+                        technical indicators, and other features to generate trading signals. They require domain
+                        expertise but not human-like reasoning capabilities.
+                    </p>
+
+                    <h3>Demand Forecasting</h3>
+                    <p>
+                        Retail and logistics companies use time-series models (including transformer-based
+                        architectures) to predict future demand. These systems analyze historical patterns, seasonality,
+                        and external factors to forecast quantities. The models are highly specialized but do not
+                        exhibit general intelligence.
+                    </p>
+
+                    <h3>Personal Example: Aquaculture</h3>
+                    <p>
+                        During my time at Captain Fresh, we used transformer models to analyze satellite imagery of
+                        aquaculture ponds. The goal was to predict harvest readiness and estimate biomass availability.
+                        This application combined computer vision with time-series analysis, demonstrating how modern
+                        architectures can solve highly specific problems outside traditional AI domains.
+                    </p>
+
+                    <hr>
+
+                    <h2>Educational Resources</h2>
+
+                    <p>
+                        To build expertise in applied AI and ML, I recommend focusing on three areas:
+                    </p>
+
+                    <h3>1. Machine Learning Fundamentals</h3>
+                    <p>
+                        <strong>Primary Resource:</strong> Kevin Murphy's <em>Probabilistic Machine Learning</em>
+                    </p>
+                    <p>
+                        This comprehensive textbook covers modeling paradigms, generative models, decision-making
+                        frameworks, and inference techniques. It provides the mathematical foundation necessary for
+                        understanding modern AI systems.
+                    </p>
+                    <p>
+                        <strong>Alternative:</strong> Stanford's CS229 Machine Learning course for a more practical
+                        introduction.
+                    </p>
+
+                    <h3>2. Modern Deep Learning Architectures</h3>
+                    <p>
+                        <strong>Primary Resource:</strong> Simon Prince's <em>Understanding Deep Learning</em>
+                    </p>
+                    <p>
+                        This open-source book includes practical notebooks and covers modern architectures:
+                        transformers, diffusion models, autoencoders, energy-based models, and graph neural networks. It
+                        bridges theory and practice effectively.
+                    </p>
+                    <p>
+                        <strong>Supplementary:</strong> Stanford's CS25 (Transformers United) and CMU's Advanced Deep
+                        Learning courses provide additional perspectives and cutting-edge research.
+                    </p>
+
+                    <h3>3. High-Performance Machine Learning (Optional)</h3>
+                    <p>
+                        If you choose the optimization path, study GPU programming, distributed training frameworks, and
+                        inference optimization techniques. Resources include:
+                    </p>
+                    <ul>
+                        <li>Stanford's CS149 (Parallel Computing)</li>
+                        <li>NVIDIA's CUDA programming guides</li>
+                        <li>PyTorch and JAX optimization documentation</li>
+                    </ul>
+
+                    <blockquote>
+                        <p>
+                            Avoid relying solely on YouTube tutorials or interview preparation content. These resources
+                            rarely teach problem-first thinking or provide the depth necessary for applied work. Focus
+                            on comprehensive textbooks and university courses that build fundamental understanding.
+                        </p>
+                    </blockquote>
+
+                    <hr>
+
+                    <h2>Choosing Your Specialization</h2>
+
+                    <p>
+                        To avoid overwhelming yourself, consider specializing along several dimensions:
+                    </p>
+
+                    <h3>By Modality</h3>
+                    <ul>
+                        <li>Text-only models (language understanding, generation)</li>
+                        <li>Vision-Language models (multimodal understanding)</li>
+                        <li>Audio models (speech, music, sound)</li>
+                        <li>Video models (temporal understanding, generation)</li>
+                    </ul>
+
+                    <h3>By Industry Vertical</h3>
+                    <ul>
+                        <li>Healthcare (medical imaging, clinical decision support)</li>
+                        <li>Finance (trading, risk assessment, fraud detection)</li>
+                        <li>Life Sciences (drug discovery, protein prediction)</li>
+                        <li>Creative Industries (music, art, design)</li>
+                        <li>Enterprise Software (productivity, automation)</li>
+                    </ul>
+
+                    <h3>By Application Type</h3>
+                    <ul>
+                        <li>Interactive systems (agents, chatbots)</li>
+                        <li>Analytical systems (forecasting, classification)</li>
+                        <li>Generative systems (content creation, synthesis)</li>
+                        <li>Optimization systems (resource allocation, planning)</li>
+                    </ul>
+
+                    <p>
+                        Start with one combination (e.g., "text models for healthcare applications") and build deep
+                        expertise before expanding to adjacent areas.
+                    </p>
+
+                    <hr>
+
+                    <h2>Key Takeaways</h2>
+
+                    <ul>
+                        <li><strong>Applied AI is not limited to agents</strong> — vertical adoption through
+                            domain-specific models represents a major opportunity</li>
+                        <li><strong>Companies build custom models for three reasons</strong> — IP ownership, compliance
+                            requirements, and competitive advantage</li>
+                        <li><strong>Applied research differs from fundamental research</strong> — most work involves
+                            adapting architectures rather than inventing new ones</li>
+                        <li><strong>Two career paths exist</strong> — training/validation specialists and
+                            scaling/optimization engineers</li>
+                        <li><strong>Applied AI vs. Applied ML</strong> — the former builds intelligence, the latter
+                            builds algorithms for specific tasks</li>
+                        <li><strong>Focus on fundamentals</strong> — study Kevin Murphy's and Simon Prince's textbooks
+                            rather than tutorial content</li>
+                        <li><strong>PEFT techniques are important</strong> — LoRA and QLoRA enable efficient fine-tuning
+                            with limited resources</li>
+                        <li><strong>Specialize strategically</strong> — choose a modality, industry, and application
+                            type to focus your learning</li>
+                        <li><strong>Applied ML remains essential</strong> — forecasting, recommendations, and
+                            optimization still require specialized algorithms</li>
+                        <li><strong>Build problem-solving skills</strong> — prioritize deep understanding over interview
+                            preparation</li>
+                    </ul>
+
+                    <hr>
+
+                    <h2>Conclusion</h2>
+
+                    <p>
+                        This article explored the second major dimension of applied AI: building and deploying
+                        domain-specific models. While Part 1 focused on agentic systems and orchestration, Part 2
+                        emphasized model development, training methodologies, and the distinction between applied AI and
+                        applied ML.
+                    </p>
+
+                    <p>
+                        The field offers multiple entry points depending on your interests and background. Whether you
+                        focus on training new models, optimizing existing ones, building agents, or developing
+                        specialized algorithms, the fundamental requirement remains the same: deep understanding of
+                        underlying principles combined with practical problem-solving skills.
+                    </p>
+
+                    <p>
+                        In future installments of this series, we will explore additional dimensions of the applied AI
+                        landscape. Stay tuned for further guidance on navigating this rapidly evolving field.
+                    </p>
+
+                </div>
+
+                <footer class="post-footer">
+                    <p style="text-align: right; font-style: italic; color: var(--ink-secondary);">
+                        — Prabakaran Chandran<br>
+                        January 2nd, 2026
+                    </p>
+                    <div class="post-end-mark">∎</div>
+                </footer>
+            </article>
+        </main>
+    </div>
+
+    <script>
+        const toggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        const saved = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', saved);
+
+        toggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+    </script>
+
+</body>
+
+</html>
