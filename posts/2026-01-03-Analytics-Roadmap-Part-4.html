@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Everything About Analytics: Signals, Systems, and the Art of Making Sense — Part 4 of the Roadmap Series on data analytics, product analytics, and analytics engineering.">
+
+    <title>Everything About Analytics: Signals, Systems, and the Art of Making Sense — Daily by Pracha.Me</title>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RWXXD2HWYN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-RWXXD2HWYN');
+    </script>
+
+    <!-- MathJax for equations -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['$$', '$$']],
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body class="post-page">
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <header class="masthead">
+                <a href="../index.html" class="masthead-title">Daily</a>
+                <div class="masthead-line"></div>
+                <p class="masthead-tagline">by <a href="https://pracha.me" class="author-link" target="_blank"
+                        rel="noopener">Pracha.Me</a></p>
+            </header>
+
+            <nav class="sidebar-nav">
+                <a href="../index.html" class="nav-item">Index</a>
+                <a href="../archive.html" class="nav-item">Archive</a>
+                <a href="https://pracha.me" class="nav-item" target="_blank" rel="noopener">About ↗</a>
+            </nav>
+
+            <section class="sidebar-section">
+                <h3 class="sidebar-heading">Topics</h3>
+                <div class="tags-list">
+                    <a href="#" class="tag">reflections</a>
+                    <a href="#" class="tag">learnings</a>
+                    <a href="#" class="tag">code</a>
+                    <a href="#" class="tag">thoughts</a>
+                    <a href="#" class="tag">math</a>
+                    <a href="#" class="tag">reading</a>
+                </div>
+            </section>
+
+            <footer class="sidebar-footer">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="icon-moon">☽</span>
+                    <span class="icon-sun">☼</span>
+                </button>
+                <span class="copyright">© 2026</span>
+            </footer>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <a href="../index.html" class="back-link">← Back to Index</a>
+
+            <article>
+                <header class="post-header">
+                    <div class="post-number">No. 004</div>
+                    <time class="post-date-full" datetime="2026-01-03">January 3, 2026</time>
+                    <h1 class="post-title">Everything About Analytics: Signals, Systems, and the Art of Making Sense
+                    </h1>
+                    <p style="font-style: italic; color: var(--ink-secondary); margin-top: var(--space-2);">Part 4 — The
+                        Roadmap Series</p>
+                    <div class="post-tags">
+                        <a href="#" class="tag">analytics</a>
+                        <a href="#" class="tag">data-science</a>
+                        <a href="#" class="tag">roadmap</a>
+                        <a href="#" class="tag">career</a>
+                    </div>
+                </header>
+
+                <div class="post-content">
+
+                    <p>
+                        Welcome back. This is the fourth blog of this roadmap series I've been writing to help people
+                        get better clarity and direction. This one is going to be about <em>everything</em> in
+                        analytics.
+                    </p>
+
+                    <p>
+                        I value all of this equally. I've worked in almost all these aspects—data science, building
+                        agentic systems, applied AI, applied ML. Now I'm transitioning towards making really good
+                        research contributions in ML science and AI. But analytics? It remains foundational to
+                        everything.
+                    </p>
+
+                    <p>
+                        Let's keep it simple. Data analytics, product analytics, growth data science, growth analytics,
+                        analytics engineering—I'd say it's all the same. All of it shares one core thing, and since I
+                        come from an instrumentation and control engineering background, let me frame it that way.
+                    </p>
+
+                    <hr>
+
+                    <h2>Analytics as Instrumentation</h2>
+
+                    <p>
+                        In instrumentation, everything is about bringing signals to the master control system so it
+                        understands what's happening around the system. We use sensors. We use DAC (data acquisition
+                        cards) to get data from those sensors. We do calibrations, noise reduction, Kalman filtering—all
+                        to get better signals, better state estimates.
+                    </p>
+
+                    <p>
+                        <strong>Analytics is exactly this: bringing in signals and making sense of them.</strong>
+                    </p>
+
+                    <p>
+                        The signals can come from anywhere—that's just data from different sources. If it comes from a
+                        product, you call it product analytics. If it comes from retail or business operations, you have
+                        business analytics or business analysts. The usual term is "data analyst," but "business
+                        analyst" adds more context—they analyze signals from business operations to help functional and
+                        technical teams take action.
+                    </p>
+
+                    <p>
+                        As simple as that.
+                    </p>
+
+                    <hr>
+
+                    <h2>The DIPP Framework and Where People Actually Operate</h2>
+
+                    <p>
+                        People always mention DIPP: Descriptive, Inquisitive, Predictive, Prescriptive analytics.
+                    </p>
+
+                    <p>
+                        But in reality, most people work up to the inquisitive part. Predictive and prescriptive work
+                        usually falls to people with titles like data scientist, machine learning engineer, or ML
+                        scientist. If your company does it differently, that's not an issue—I'm not drawing hard
+                        boundaries. I'm just giving you an accurate picture of how companies actually operate.
+                    </p>
+
+                    <hr>
+
+                    <h2>Analytics in the AI Era</h2>
+
+                    <p>
+                        Let's talk about how analytics and AI go hand in hand now, and how AI is being used for
+                        analytics.
+                    </p>
+
+                    <p>
+                        Here's the thing: you cannot dump millions of rows into any AI system and magically get sense
+                        out of it. Previously, everyone wrote SQL. When I was working at Mu Sigma, people were <em>so
+                            good</em> at SQL and Excel. I wasn't at that level because I never had the opportunity to do
+                        that ad hoc analysis—daily product reports, customer information sheets, audit reports. I was
+                        fully on the machine learning and optimization side.
+                    </p>
+
+                    <p>
+                        But those colleagues? They knew almost every Excel shortcut. They knew SQL optimization—cascaded
+                        queries, correlated queries. Everyone had their queries saved, ready to modify and run. It was
+                        impressive.
+                    </p>
+
+                    <p>
+                        Now AI helps write these queries automatically. But ultimately, <strong>analysts are the ones
+                            who decide where to look, what data to examine, what new columns or metrics to create, what
+                            KPIs to track, and how to view them.</strong>
+                    </p>
+
+                    <hr>
+
+                    <h2>The Problem with Raw Numbers</h2>
+
+                    <p>
+                        Numbers can be misleading—even cryptic.
+                    </p>
+
+                    <p>
+                        Take Annual Recurring Revenue: $1,000 ARR. Sounds straightforward, but will it actually recur
+                        next year? It can go up or down due to cannibalization, competition, a hundred other factors.
+                        That single number doesn't tell you the whole story.
+                    </p>
+
+                    <p>
+                        To make sense of specific business characteristics or user behavior, we need specific metrics:
+                        click-through rate, customer lifetime value, monthly active users, dwelling time. When I was
+                        working on product analytics, we developed something called "stickiness"—coming up with a
+                        meaningful metric is itself significant work.
+                    </p>
+
+                    <p>
+                        All the data gets dumped from systems, but systems don't record KPIs directly. That would
+                        confuse people because not all KPIs are needed everywhere. So there's substantial engineering
+                        effort involved—this is what people now call <strong>analytics engineering</strong>: building
+                        the data analytics pipeline.
+                    </p>
+
+                    <hr>
+
+                    <h2>Where the Work Starts</h2>
+
+                    <p>
+                        The work starts from the data warehouse where tables are properly arranged. That's
+                        enterprise-level data management—it's already set up. Analytics engineers, data analysts, and
+                        business analysts work from these warehouses and data sources.
+                    </p>
+
+                    <p>
+                        These sources can come from many places: Delta Lake, Snowflake, AWS (there's a warehouse
+                        service—I forget the exact name), Google BigQuery.
+                    </p>
+
+                    <p>
+                        When I was at Mu Sigma in 2019, people used Pentaho and Informatica. Over time, I've seen things
+                        shift toward Snowflake, Databricks, BigQuery, Azure Data Factory. But everything supports SQL.
+                        People know the business, they know the data dictionary, they know where everything lives.
+                    </p>
+
+                    <p>
+                        The key is writing <strong>effective queries</strong> because queries take time and cost money.
+                        You write effective queries, get your data snapshot, calculate metrics, and build dashboards.
+                    </p>
+
+                    <hr>
+
+                    <h2>Why Analytics Engineering Is Growing</h2>
+
+                    <p>
+                        The term "analytics engineering" has become prominent, especially in emerging companies and
+                        across the US. The reason: analytics has become more software-oriented.
+                    </p>
+
+                    <p>
+                        Many companies don't need unique views of data. They need standard things: monthly sales, weekly
+                        sales, how sales have changed, which channels contribute traffic, where users come from. This is
+                        typical for product companies.
+                    </p>
+
+                    <p>
+                        For standardized needs, you want a software engineering approach—streamlined data warehouse
+                        connections, easy data fetching, version-controlled tables and views, calculated metrics, proper
+                        reporting. This gets connected through tools like DBT. Tableau has everything built-in for
+                        streamlining.
+                    </p>
+
+                    <p>
+                        For large-scale operations where companies want to stay minimal, they use Airflow to run queries
+                        against BigQuery or Spark, then visualize in Power BI or Tableau.
+                    </p>
+
+                    <hr>
+
+                    <h2>The Two Essential Elements</h2>
+
+                    <p>
+                        In business analytics—whether you're a business analyst or analytics engineer—you need two
+                        elements:
+                    </p>
+
+                    <p>
+                        <strong>First: Strong understanding of the business or operations you're dealing with.</strong>
+                    </p>
+
+                    <p>
+                        This is the real important thing. Without it, you can't make sense of expectations from business
+                        teams.
+                    </p>
+
+                    <p>
+                        <strong>Second: Familiarity with the tools.</strong>
+                    </p>
+
+                    <p>
+                        The contribution here isn't innovative or scientific in the research sense—we're not winning
+                        algorithmic prizes. It's about workflow. How you build that workflow.
+                    </p>
+
+                    <hr>
+
+                    <h2>The Critical Differentiator: Analytical Thinking</h2>
+
+                    <p>
+                        If you want to become <em>really</em> good, there's a third thing: <strong>analytical
+                            thinking</strong>.
+                    </p>
+
+                    <p>
+                        Sometimes business teams don't know how to look at data. They don't know what metrics they need
+                        or what observability would help them. They might be confused about whether to look at gross
+                        sales or foot traffic. These confusions happen.
+                    </p>
+
+                    <p>
+                        That's where you, as an analytical thinker, clear the chaos. You say: "This situation needs this
+                        way of looking at trends and patterns."
+                    </p>
+
+                    <hr>
+
+                    <h2>Two Dimensions of Analytics Work</h2>
+
+                    <p>
+                        I see the work existing across two dimensions:
+                    </p>
+
+                    <h3>Dimension One: Software-Engineered Analytics Workflows</h3>
+
+                    <p>
+                        This is the descriptive analytics part. You know exactly what metrics to calculate, how
+                        dashboards should look, who receives reports, where data gets fetched. Everything is predefined
+                        and systematized.
+                    </p>
+
+                    <h3>Dimension Two: Experiments and Hypothesis Testing</h3>
+
+                    <p>
+                        This is fundamentally different from calculating KPIs. Those KPIs might reveal a problem—say,
+                        customers aren't renewing subscriptions, or they're not buying more. The metrics reveal the
+                        problem.
+                    </p>
+
+                    <p>
+                        But going from problem to clarity requires testing multiple hypotheses. Is it a bug? Is
+                        onboarding time causing issues? Is inventory not supporting demand? Are there delivery delays?
+                    </p>
+
+                    <p>
+                        These are hypotheses that the analytics professional must form. And they must test them too.
+                    </p>
+
+                    <p>
+                        <strong>This is a treasure hunt.</strong> Looking for evidence is not the same as calculating
+                        metrics.
+                    </p>
+
+                    <hr>
+
+                    <h2>Building Statistical Rigor</h2>
+
+                    <p>
+                        Based on your curiosity and involvement, you use different methodologies. If you want to level
+                        up, focus on statistical inference and quantitative approaches.
+                    </p>
+
+                    <p>
+                        For example:
+                    </p>
+                    <ul>
+                        <li>Monte Carlo sampling to validate patterns</li>
+                        <li>Simple linear regression models for additional assurance</li>
+                        <li>Proper hypothesis testing that leads to statistical evidence</li>
+                    </ul>
+
+                    <p>
+                        As you get interested, start with <strong>basic frequentist analytics</strong>. Don't waste time
+                        fighting about "I'm Bayesian" or "I'm frequentist"—that's not your job. Stick with frequentist
+                        approaches. Start with high school statistics: dispersion, data distributions, variance
+                        analysis, hypothesis testing, statistical inference.
+                    </p>
+
+                    <hr>
+
+                    <h2>The Misconception Problem</h2>
+
+                    <p>
+                        I sometimes feel frustrated that influencers and tutorials reduce statistics to if-else
+                        conditions. "If p-value is less than 0.05, reject the hypothesis. If greater, accept it."
+                    </p>
+
+                    <p>
+                        That's not how it works. There are nuances.
+                    </p>
+
+                    <p>
+                        Another misconception: "If you have less than 30 data points, use t-test. If more than 30, use
+                        z-test."
+                    </p>
+
+                    <p>
+                        Times have changed. Data acquisition isn't expensive anymore. These rules came from centuries
+                        ago when data collection itself was difficult. They were developed for clinical, healthcare, and
+                        biological contexts where you genuinely had tiny samples—Francis Galton's era, Fisher's t-test
+                        period.
+                    </p>
+
+                    <p>
+                        Now we have millions of rows. We used to say "big data"—now nothing feels big anymore. We just
+                        have data. In these situations, use statistical tests with more clarity and understanding.
+                    </p>
+
+                    <blockquote>
+                        <p>
+                            Spend a month studying common misconceptions in data science courses, analytics tutorials,
+                            and statistical blogs. Even understanding hypothesis testing has many misconceptions that
+                            most content glosses over.
+                        </p>
+                    </blockquote>
+
+                    <hr>
+
+                    <h2>Recommended Reading</h2>
+
+                    <h3>For Rigorous Statistics</h3>
+                    <p>
+                        <strong>All of Statistics</strong> by Larry Wasserman. I always suggest this. His lectures and
+                        details are really, really good.
+                    </p>
+
+                    <h3>For Intuition Building</h3>
+                    <p>
+                        <strong>The Art of Statistics</strong> if you're more of a populist reader—good for getting
+                        intuition, less technical depth.
+                    </p>
+
+                    <h3>For Thinking Like an Econometrician</h3>
+                    <p>
+                        Keep reading habits that expose you to how econometricians approach problems. Joshua Angrist,
+                        the Nobel laureate who studied labor markets and causal inference, has said "metrics is the
+                        original data science"—econometrics is just different forms of statistical and linear modeling.
+                    </p>
+
+                    <p>
+                        Focus on: statistical testing, linear models, how to understand and interpret results, and the
+                        problems with p-value hacking. If you're interested, explore <strong>e-values</strong>—they're
+                        gaining attention.
+                    </p>
+
+                    <hr>
+
+                    <h2>Building Your Leverage</h2>
+
+                    <p>
+                        Here's how to think about this: all analytics professionals know business. Let's say you're a
+                        beginner—you know Excel and SQL. What else can you learn? How can you think through problems?
+                        How can you give insights that have <strong>statistical evidence</strong> behind them?
+                    </p>
+
+                    <p>
+                        That's building leverage.
+                    </p>
+
+                    <h3>Scalable Analytics Skills</h3>
+
+                    <p>
+                        Most scalability problems have been solved by existing tools. But if you're joining a startup,
+                        you can't always expect polished data interfaces and infrastructure in place.
+                    </p>
+
+                    <p>
+                        For leverage, I'd say: <strong>learn DBT, learn PySpark</strong>.
+                    </p>
+
+                    <p>
+                        This gives you a Swiss Army knife. You combine scalable analytics systems with statistical
+                        thinking and analytical thinking. You can move between descriptive and inquisitive analytics,
+                        even lean toward predictive to an extent.
+                    </p>
+
+                    <p>
+                        Nobody wants to stay in the same job forever. These are the opportunities for growth.
+                    </p>
+
+                    <hr>
+
+                    <h2>AI for Analytics: The Real Opportunity</h2>
+
+                    <p>
+                        What do I mean by AI for analytics? I'm not talking about using Claude to generate SQL
+                        codes—you'll figure that out on your own.
+                    </p>
+
+                    <p>
+                        Here's the bigger picture: most unstructured business data is <strong>text and images</strong>.
+                        Customer reviews, customer feedback, complaints, support tickets.
+                    </p>
+
+                    <p>
+                        If you've already geared yourself up to write Airflow, DBT, or Spark workflows, it's just a
+                        matter of time before you write a few prompts, use APIs, and build AI into those workflows. You
+                        can integrate this into your Airflow workflow, Astronomer workflow, or Databricks notebooks.
+                    </p>
+
+                    <p>
+                        Then you're not just analyzing numbers, metrics, and dollar figures. You're also understanding:
+                    </p>
+                    <ul>
+                        <li>What operations teams wrote as complaints</li>
+                        <li>What rejections or refusals occurred</li>
+                        <li>What issues customers expressed</li>
+                        <li>What patterns emerge from feedback</li>
+                    </ul>
+
+                    <p>
+                        If you work at a marketing company, think about <strong>social listening</strong>—monitoring
+                        what people say about your brand across social media.
+                    </p>
+
+                    <p>
+                        AI models, even open-source ones, have completely taken over the burden of data extraction.
+                        Someone writes something positive or negative? You classify it and bucket it for analysis. You
+                        extract <strong>golden signals</strong> from comments, write-ups, images, all the rantings.
+                    </p>
+
+                    <h3>A Project Idea</h3>
+
+                    <p>
+                        For your personal projects, think about <strong>data fusion</strong>: combining structured and
+                        unstructured data, using relevant methods for each, merging them, coming up with insights,
+                        identifying doubts, and proceeding further. It becomes a loop.
+                    </p>
+
+                    <h3>A Note for Analytics Leadership</h3>
+
+                    <p>
+                        I'd suggest that analytics leaders think about this: not everything has to go to completely
+                        separate teams. An analyst working close to business and operations can easily do these
+                        extractions, run inference, perform statistical validations, and create a nice presentation.
+                    </p>
+
+                    <hr>
+
+                    <h2>Communication: Really, Really Important</h2>
+
+                    <p>
+                        Anyone calling themselves an analytics professional—<strong>communication is really, really,
+                            really important.</strong>
+                    </p>
+
+                    <p>
+                        If you're a machine learning engineer, you might only talk to your manager or the person guiding
+                        you. But irrespective of your level, you have to communicate with different functions in the
+                        company and team.
+                    </p>
+
+                    <p>
+                        Communication isn't just English. It's <strong>data storytelling</strong>.
+                    </p>
+
+                    <h3>Books I Always Recommend</h3>
+
+                    <ul>
+                        <li><strong>Storytelling with Data</strong> by Cole Nussbaumer Knaflic</li>
+                        <li><strong>Information is Beautiful</strong> by David McCandless</li>
+                    </ul>
+
+                    <p>
+                        These are excellent reference materials for adopting a visual and narrative style.
+                    </p>
+
+                    <p>
+                        <strong>Bonus content:</strong> Read data journalism. The New York Times has exceptional
+                        visualizations and plots. Study how they present complex information.
+                    </p>
+
+                    <h3>Additional Reads</h3>
+
+                    <ul>
+                        <li><strong>The Little Book of Data</strong></li>
+                        <li><strong>How Data Happened</strong></li>
+                    </ul>
+
+                    <p>
+                        These give you perspective: you're not doing a simple job. You're a critical piece of the
+                        organization. <strong>From you, clarity starts for the company.</strong>
+                    </p>
+
+                    <hr>
+
+                    <h2>Your Position in the AI Era</h2>
+
+                    <p>
+                        Maybe people say data engineers are the ones doing the heavy lifting. But analytics as a
+                        collective organization matters equally. Data analysts and analytics engineers are crucial—and
+                        they gain <strong>more power in the AI era</strong>.
+                    </p>
+
+                    <p>
+                        You don't need to worry about debugging SQL code or fighting with queries anymore. Think
+                        broader. Look for those <strong>golden signals</strong>. Figure out the <strong>blind
+                            spots</strong> so you can help businesses see what they're missing.
+                    </p>
+
+                    <p>
+                        If you have leadership thinking or strategic thinking, you can lean toward:
+                    </p>
+                    <ul>
+                        <li>Analytics and Strategy</li>
+                        <li>Analytics and Customer Success</li>
+                        <li>Analytics and Marketing Success</li>
+                    </ul>
+
+                    <hr>
+
+                    <h2>The Bigger Game</h2>
+
+                    <p>
+                        I'd say analytics is genuinely beginner-friendly. It's a very good stepping stone into a bigger
+                        industry.
+                    </p>
+
+                    <p>
+                        But as I mentioned—keep building your leverage so you can play a bigger game:
+                    </p>
+
+                    <ul>
+                        <li><strong>Analytics + Strategy</strong></li>
+                        <li><strong>Analytics + Policy</strong></li>
+                        <li><strong>Analytics + Data Journalism</strong></li>
+                        <li><strong>Analytics + Advocacy</strong></li>
+                    </ul>
+
+                    <p>
+                        Nobody stays in the same job forever. The question is what doors you're opening today.
+                    </p>
+
+                    <hr>
+
+                    <h2>Key Takeaways</h2>
+
+                    <ul>
+                        <li><strong>Analytics is instrumentation</strong> — bringing in signals and making sense of them
+                        </li>
+                        <li><strong>Most work happens in descriptive and inquisitive analytics</strong> —
+                            predictive/prescriptive typically falls to data scientists</li>
+                        <li><strong>AI helps but doesn't replace analytical thinking</strong> — you still decide what to
+                            look at and how</li>
+                        <li><strong>Analytics engineering is growing</strong> — software-oriented approaches to
+                            standardized analytics needs</li>
+                        <li><strong>Two essential elements</strong> — business understanding and tool familiarity</li>
+                        <li><strong>Analytical thinking is the differentiator</strong> — helping teams see what metrics
+                            they actually need</li>
+                        <li><strong>Build statistical rigor</strong> — go beyond p-value thresholds, understand the
+                            nuances</li>
+                        <li><strong>Learn DBT and PySpark for leverage</strong> — Swiss Army knife for scalable
+                            analytics</li>
+                        <li><strong>AI for unstructured data is the opportunity</strong> — integrate text/image analysis
+                            into your workflows</li>
+                        <li><strong>Communication and storytelling matter</strong> — you create clarity for the entire
+                            company</li>
+                        <li><strong>Play a bigger game</strong> — Analytics + Strategy, Policy, Journalism, or Advocacy
+                        </li>
+                    </ul>
+
+                    <hr>
+
+                    <p>
+                        This is Part 4 of my roadmap series. Keep building, keep exploring.
+                    </p>
+
+                </div>
+
+                <footer class="post-footer">
+                    <p style="text-align: right; font-style: italic; color: var(--ink-secondary);">
+                        — Prabakaran Chandran<br>
+                        January 3rd, 2026
+                    </p>
+                    <div class="post-end-mark">∎</div>
+                </footer>
+            </article>
+        </main>
+    </div>
+
+    <script>
+        const toggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        const saved = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', saved);
+
+        toggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+    </script>
+
+</body>
+
+</html>
