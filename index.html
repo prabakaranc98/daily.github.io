@@ -41,12 +41,12 @@
             <section class="sidebar-section">
                 <h3 class="sidebar-heading">Topics</h3>
                 <div class="tags-list">
+                    <a href="#" class="tag">career</a>
+                    <a href="#" class="tag">entrepreneurship</a>
+                    <a href="#" class="tag">data-science</a>
                     <a href="#" class="tag">reflections</a>
-                    <a href="#" class="tag">learnings</a>
-                    <a href="#" class="tag">code</a>
-                    <a href="#" class="tag">thoughts</a>
-                    <a href="#" class="tag">math</a>
-                    <a href="#" class="tag">reading</a>
+                    <a href="#" class="tag">columbia</a>
+                    <a href="#" class="tag">personal</a>
                 </div>
             </section>
 
@@ -54,19 +54,19 @@
                 <h3 class="sidebar-heading">Recent</h3>
                 <ul class="recent-list">
                     <li class="recent-item">
+                        <a href="posts/2026-01-12-Entrepreneurial-Dream-Part-2.html" class="recent-link">Entrepreneurial
+                            Dream: Part 2</a>
+                        <span class="recent-date">Jan 12</span>
+                    </li>
+                    <li class="recent-item">
+                        <a href="posts/2026-01-11-Entrepreneurial-Dream-Part-1.html" class="recent-link">Entrepreneurial
+                            Dream: Part 1</a>
+                        <span class="recent-date">Jan 11</span>
+                    </li>
+                    <li class="recent-item">
                         <a href="posts/2026-01-10-Bootcamps-Influencers-Critique.html" class="recent-link">Bootcamps and
                             LinkedIn Influencers</a>
                         <span class="recent-date">Jan 10</span>
-                    </li>
-                    <li class="recent-item">
-                        <a href="posts/2026-01-09-Spring-2026-Prior.html" class="recent-link">Spring 2026: Setting a
-                            Prior</a>
-                        <span class="recent-date">Jan 09</span>
-                    </li>
-                    <li class="recent-item">
-                        <a href="posts/2026-01-08-Columbia-MS-Data-Science.html" class="recent-link">Columbia MS in Data
-                            Science</a>
-                        <span class="recent-date">Jan 08</span>
                     </li>
                 </ul>
             </section>
@@ -99,6 +99,26 @@
                 <div class="year-group">
                     <h2 class="year-heading">2026</h2>
                     <ul class="posts-list">
+                        <li class="post-entry">
+                            <span class="entry-date">Jan 12</span>
+                            <a href="posts/2026-01-12-Entrepreneurial-Dream-Part-2.html" class="entry-title">Me and My
+                                Entrepreneurial Dream: Part 2</a>
+                            <div class="entry-tags">
+                                <a href="#" class="entry-tag">entrepreneurship</a>
+                                <a href="#" class="entry-tag">captain-fresh</a>
+                                <a href="#" class="entry-tag">ml-products</a>
+                            </div>
+                        </li>
+                        <li class="post-entry">
+                            <span class="entry-date">Jan 11</span>
+                            <a href="posts/2026-01-11-Entrepreneurial-Dream-Part-1.html" class="entry-title">Me and My
+                                Entrepreneurial Dream: Part 1</a>
+                            <div class="entry-tags">
+                                <a href="#" class="entry-tag">entrepreneurship</a>
+                                <a href="#" class="entry-tag">career</a>
+                                <a href="#" class="entry-tag">ml-companies</a>
+                            </div>
+                        </li>
                         <li class="post-entry">
                             <span class="entry-date">Jan 10</span>
                             <a href="posts/2026-01-10-Bootcamps-Influencers-Critique.html"
@@ -244,6 +264,131 @@
             const next = current === 'dark' ? 'light' : 'dark';
             html.setAttribute('data-theme', next);
             localStorage.setItem('theme', next);
+        });
+
+        // Tag Filtering
+        let activeTag = null;
+
+        // Get all sidebar topic tags
+        const sidebarTags = document.querySelectorAll('.tags-list .tag');
+
+        // Get all post entries
+        const postEntries = document.querySelectorAll('.post-entry');
+        const yearGroups = document.querySelectorAll('.year-group');
+
+        // Create filter status element
+        const postsIndex = document.querySelector('.posts-index');
+        if (postsIndex) {
+            const filterStatus = document.createElement('div');
+            filterStatus.className = 'filter-status';
+            filterStatus.style.cssText = 'display: none; margin-bottom: 2rem; padding: 1rem; background: var(--surface-secondary, #f5f5f5); border-radius: 8px; font-size: 0.9rem;';
+            filterStatus.innerHTML = '<span class="filter-text"></span> <a href="#" class="clear-filter" style="margin-left: 1rem; color: var(--accent, #8b7355);">Clear filter</a>';
+            postsIndex.insertBefore(filterStatus, postsIndex.firstChild);
+
+            const clearFilterBtn = filterStatus.querySelector('.clear-filter');
+            clearFilterBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                clearFilter();
+            });
+        }
+
+        function filterByTag(tag) {
+            activeTag = tag;
+
+            // Update sidebar tag styles
+            sidebarTags.forEach(t => {
+                if (t.textContent.toLowerCase() === tag.toLowerCase()) {
+                    t.style.background = 'var(--accent, #8b7355)';
+                    t.style.color = 'var(--surface, #fff)';
+                } else {
+                    t.style.background = '';
+                    t.style.color = '';
+                }
+            });
+
+            // Filter posts
+            let visibleCount = 0;
+            postEntries.forEach(entry => {
+                const entryTags = entry.querySelectorAll('.entry-tag');
+                const hasTag = Array.from(entryTags).some(t =>
+                    t.textContent.toLowerCase() === tag.toLowerCase()
+                );
+
+                if (hasTag) {
+                    entry.style.display = '';
+                    visibleCount++;
+                } else {
+                    entry.style.display = 'none';
+                }
+            });
+
+            // Hide year groups with no visible posts
+            yearGroups.forEach(group => {
+                const visiblePosts = group.querySelectorAll('.post-entry:not([style*="display: none"])');
+                group.style.display = visiblePosts.length > 0 ? '' : 'none';
+            });
+
+            // Update filter status
+            const filterStatus = document.querySelector('.filter-status');
+            if (filterStatus) {
+                filterStatus.style.display = 'flex';
+                filterStatus.style.alignItems = 'center';
+                filterStatus.style.justifyContent = 'space-between';
+                filterStatus.querySelector('.filter-text').textContent =
+                    `Showing ${visibleCount} post${visibleCount !== 1 ? 's' : ''} tagged "${tag}"`;
+            }
+        }
+
+        function clearFilter() {
+            activeTag = null;
+
+            // Reset sidebar tag styles
+            sidebarTags.forEach(t => {
+                t.style.background = '';
+                t.style.color = '';
+            });
+
+            // Show all posts
+            postEntries.forEach(entry => {
+                entry.style.display = '';
+            });
+
+            // Show all year groups
+            yearGroups.forEach(group => {
+                group.style.display = '';
+            });
+
+            // Hide filter status
+            const filterStatus = document.querySelector('.filter-status');
+            if (filterStatus) {
+                filterStatus.style.display = 'none';
+            }
+        }
+
+        // Add click handlers to sidebar tags
+        sidebarTags.forEach(tag => {
+            tag.addEventListener('click', (e) => {
+                e.preventDefault();
+                const tagText = tag.textContent.toLowerCase();
+                if (activeTag === tagText) {
+                    clearFilter();
+                } else {
+                    filterByTag(tagText);
+                }
+            });
+        });
+
+        // Add click handlers to post entry tags
+        document.querySelectorAll('.entry-tag').forEach(tag => {
+            tag.addEventListener('click', (e) => {
+                e.preventDefault();
+                const tagText = tag.textContent.toLowerCase();
+                if (activeTag === tagText) {
+                    clearFilter();
+                } else {
+                    filterByTag(tagText);
+                }
+            });
         });
     </script>
 
