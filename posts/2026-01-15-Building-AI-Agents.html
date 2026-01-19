@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Building AI Agents: What You Actually Need to Think About — Cognitive architecture, sandboxes, validation, and the real design patterns that matter.">
+
+    <title>Building AI Agents: What You Actually Need to Think About — Daily by Pracha.Me</title>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RWXXD2HWYN"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-RWXXD2HWYN');
+    </script>
+
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body class="post-page">
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <header class="masthead">
+                <a href="../index.html" class="masthead-title">Daily</a>
+                <div class="masthead-line"></div>
+                <p class="masthead-tagline">by <a href="https://pracha.me" class="author-link" target="_blank"
+                        rel="noopener">Pracha.Me</a></p>
+            </header>
+
+            <nav class="sidebar-nav">
+                <a href="../index.html" class="nav-item">Index</a>
+                <a href="../archive.html" class="nav-item">Archive</a>
+                <a href="https://pracha.me" class="nav-item" target="_blank" rel="noopener">About ↗</a>
+            </nav>
+
+            <section class="sidebar-section">
+                <h3 class="sidebar-heading">Topics</h3>
+                <div class="tags-list">
+                    <a href="#" class="tag">reflections</a>
+                    <a href="#" class="tag">learnings</a>
+                    <a href="#" class="tag">code</a>
+                    <a href="#" class="tag">thoughts</a>
+                    <a href="#" class="tag">math</a>
+                    <a href="#" class="tag">reading</a>
+                </div>
+            </section>
+
+            <footer class="sidebar-footer">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="icon-moon">☽</span>
+                    <span class="icon-sun">☼</span>
+                </button>
+                <span class="copyright">© 2026</span>
+            </footer>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <a href="../index.html" class="back-link">← Back to Index</a>
+
+            <article>
+                <header class="post-header">
+                    <div class="post-number">No. 016</div>
+                    <time class="post-date-full" datetime="2026-01-15">January 15, 2026</time>
+                    <h1 class="post-title">Building AI Agents: What You Actually Need to Think About</h1>
+                    <div class="post-tags">
+                        <a href="#" class="tag">ai-agents</a>
+                        <a href="#" class="tag">llm</a>
+                        <a href="#" class="tag">engineering</a>
+                        <a href="#" class="tag">architecture</a>
+                    </div>
+                </header>
+
+                <div class="post-content">
+
+                    <p>
+                        In this post, I'll talk about AI agents—keeping in mind people who are working on different
+                        projects, building their profile, or just getting started with agents.
+                    </p>
+
+                    <p>
+                        By now, you would have explored different courses, different YouTube videos, and you know what
+                        different companies are doing with agents. So I want to give different perspectives on specific
+                        things.
+                    </p>
+
+                    <hr>
+
+                    <h2>Agents and RL: What Does That Actually Mean?</h2>
+
+                    <p>
+                        Recently, someone said they're interested in LLM agents and reinforcement learning, especially
+                        the "self-improving" setup where you build scalable environments plus automated verifiers. A
+                        useful way to think about a verifier is as an evaluative signal—closer to a reward function or a
+                        critic-like scorer—rather than literally the Bellman value function itself.
+                    </p>
+
+                    <p>
+                        In classical RL, the value function V(s) (or Q(s,a)) estimates expected long-term return and is
+                        tied to the environment's dynamics via the Bellman relationship. In agent training, a verifier
+                        instead checks whether a step, tool call, intermediate state, or final outcome satisfies some
+                        criterion (correctness, safety, constraint satisfaction, progress), and turns that into a score
+                        or label. That signal can then be used to (a) select better trajectories at inference time,
+                        and/or (b) train the policy with RL-style updates or preference-style optimization.
+                    </p>
+
+                    <p>
+                        In practice, for industrial applications, it's going to be more about meta-prompting and
+                        algorithms rather than completely tuning LLM weights. Test-time RL exists, but practically,
+                        we're working at the prompting and algorithm level.
+                    </p>
+
+                    <hr>
+
+                    <h2>Beyond Simple Agents: Critical Design Patterns</h2>
+
+                    <p>
+                        People are curious about agents. They learn LangGraph, LLMs, prompting, tools, connectors,
+                        different frameworks. But what we need to look at is critical design patterns, not just simple
+                        things like resume filtering agents, blog writing agents, summarization agents, or data analysis
+                        agents.
+                    </p>
+
+                    <p>
+                        One thing I've noticed: agents for data analysis are sometimes flawed by design. People use
+                        function calls—the agent calls functions, tools return aggregated values, and based on prompts
+                        or the LLM's parametric knowledge, it comes up with conclusions. But this way of analysis might
+                        not meet what the business needs or what the problem itself needs.
+                    </p>
+
+                    <p>
+                        People who develop data analysis agents sometimes have flawed ideas about statistics—how to see
+                        things statistically, how to come up with statistical fallbacks, how to inform agents to keep
+                        certain metrics in mind. And other things like summarization, calendars, or rule-based
+                        adjustments for triggering other systems are very typical.
+                    </p>
+
+                    <hr>
+
+                    <h2>The Real Use Case: Agents in Sandboxes</h2>
+
+                    <p>
+                        The other side—agents within sandboxes that perform long-running tasks—is very important and
+                        gaining traction.
+                    </p>
+
+                    <p>
+                        Simple use cases will eventually be available as wrappers, as simple functions. But for real
+                        problems, critical problems like coding, the agent (LLM with prompts, skills, and context) runs
+                        in a specific sandbox and manages its context dynamically.
+                    </p>
+
+                    <p>
+                        It's not like people typically think—you just append all past conversations and it'll be fine.
+                        No. <strong>We need cognitive architecture</strong>, which is crucial for building agents.
+                    </p>
+
+                    <hr>
+
+                    <h2>The Layers of Agent Architecture</h2>
+
+                    <p>
+                        Let's see the different layers required for agents. The base skeleton is the LLM and prompts.
+                        But around that, different contexts or memories are required: working memory, long-term memory,
+                        short-term memory, sometimes episodic memory.
+                    </p>
+
+                    <p>
+                        I don't want to throw rigid terminologies, but conceptually, there needs to be working memory to
+                        continue doing actions. When demand arises, the agent has to look at the past—the long-term
+                        memory. "What happened in the past? What critical things have been recorded?"
+                    </p>
+
+                    <p>
+                        For example, meeting assistant agents—people are betting on capabilities like the assistant
+                        helping from past conversations and learnings. Maintaining different levels of memory and
+                        context is essential.
+                    </p>
+
+                    <p>
+                        One might wonder about infinite context. But dumping everything at once versus meticulously
+                        having a context inventory is actually helpful for nuanced tasks—coding, planning, document
+                        synthesis, decision-making in law or insurance.
+                    </p>
+
+                    <p>
+                        That's why the concept of skills is emerging. They don't want to keep everything dumped. It's
+                        arranged so agents can decide when to refer to what.
+                    </p>
+
+                    <hr>
+
+                    <h2>Conversation Mining: Learning from History</h2>
+
+                    <p>
+                        Another important experiment to look at: how can conversation mining help agents learn from past
+                        history?
+                    </p>
+
+                    <p>
+                        Almost many enterprises are deploying agents for customer support or strategic planning. The
+                        knowledge is actually in thousands of conversation traces. How can we utilize them?
+                    </p>
+
+                    <p>
+                        One might wonder, "Can we train a model and use it as an agent?" Sometimes the setup might not
+                        be there. So how can we use these conversations as data, as a substrate for agents?
+                    </p>
+
+                    <p>
+                        That involves either building a knowledge graph, or what people now call context graphs—which
+                        some are claiming is a trillion-dollar economy. That's worth exploring. MCP tools exist, but if
+                        you're interested in developing tools and connectors, that's fine.
+                    </p>
+
+                    <p>
+                        I'm biased towards the art and science of agents, especially cognitive architecture. What else
+                        can we explore there?
+                    </p>
+
+                    <hr>
+
+                    <h2>Sandboxes: The Kitchen for Agents</h2>
+
+                    <p>
+                        Sandboxes are something we need to really think about. Most people build projects that run in
+                        scripts—the agent calls functions that are again scripts.
+                    </p>
+
+                    <p>
+                        In reality, it's not going to be one agent. Products will have hundreds of replicable agents. If
+                        I'm a subscriber, I'll have my own agent doing its own work inside a specific sandbox,
+                        delivering results.
+                    </p>
+
+                    <p>
+                        It's like building the kitchen for those agents. Think about how modular kitchen setups vary
+                        from place to place.
+                    </p>
+
+                    <p>
+                        By default, sandboxes have basic things: isolation, connectivity, resource sharing. Concepts
+                        like gVisor exist, but now these things are abstracted. You can get them from E2B or Modal, or
+                        develop with Kubernetes or open-source alternatives.
+                    </p>
+
+                    <p>
+                        But within that sandbox, how do you set up other things? That's the modular kitchen. Kitchen
+                        comes with gas connections, stove—similar to sandbox with connectivity, isolation, network,
+                        resource allocation. But equipping that sandbox with enough things—a server to deploy
+                        applications that agents build, database connections, specific tools to deal with Notion or
+                        other services—that's where the work is.
+                    </p>
+
+                    <p>
+                        If someone can learn to build agents and maintain and improve sandbox environments, they can
+                        build many things: video generation, unique ad generation for multiple users, personal cloud
+                        setups. I was reading about Lovable's sandbox concepts with Modal. Someone can simply build this
+                        at small scale.
+                    </p>
+
+                    <hr>
+
+                    <h2>Behavioral Agents for Market Research</h2>
+
+                    <p>
+                        On the other side, there are personality-driven, behavioral-driven agents for consumer research
+                        and market research.
+                    </p>
+
+                    <p>
+                        Say we want to run consumer research to understand how people would buy a product—mimicking
+                        human preferences. Two aspects here:
+                    </p>
+
+                    <p>
+                        First, the science side: understanding or encoding behavioral and persona-related information
+                        into agents.
+                    </p>
+
+                    <p>
+                        Second, the infrastructure and engineering side: how to run questionnaires or surveys to
+                        thousands of agents. Say you want to replicate a survey of how people buy protein powder, or how
+                        people buy books. You want to study different segments—school goers, college students, office
+                        executives, working-class people. You need a sample of 1,000, running at least 25 questions.
+                    </p>
+
+                    <p>
+                        One thing is just doing it in a for loop—very naive. But if you're building it as a product to
+                        give to different CPG customers or consumer product companies, you need parallel agents running
+                        at scale. Interview multiple LLM agents (or generative social agents) in parallel, aggregate
+                        results, do analysis.
+                    </p>
+
+                    <hr>
+
+                    <h2>Agents in Data Science and Enterprise Tasks</h2>
+
+                    <p>
+                        Another aspect: agents as part of typical data science, machine learning, or enterprise tasks.
+                    </p>
+
+                    <p>
+                        Most of the time, people see agents as part of summarization or automation—straightforward
+                        logic. But in places where people build agents for recommendations, or LLMs for insurance,
+                        banking, medical, or drug-related aspects—there's unstructured data, but also structured data
+                        from warehouses needing specific transformations.
+                    </p>
+
+                    <p>
+                        In that case, it's not just automation or if-else prompting. There needs to be more knowledge
+                        about how to look at data, how to compare scenarios, what validations or hypotheses to consider.
+                        It shouldn't be at surface level, especially for business-specific applications.
+                    </p>
+
+                    <p>
+                        That's where people who know the domain get leverage—people who know how to look at different
+                        numbers, how to build guardrails and validations.
+                    </p>
+
+                    <hr>
+
+                    <h2>Validation: The Critical Missing Piece</h2>
+
+                    <p>
+                        One specific thing agents need is validation. Sometimes people test on face value: "Oh, this
+                        output is fine." But we need proper testing.
+                    </p>
+
+                    <p>
+                        I think even tester or testing jobs might evolve into helping develop evaluation pipelines.
+                        Previously, evaluation pipelines were only RAG-specific: precision, retrieval, recall,
+                        hallucination detection.
+                    </p>
+
+                    <p>
+                        But now agents are taking different actions. We need to validate traces with the rationale
+                        behind them. In this situation, did it take the right direction? Is it aware of the rationale?
+                    </p>
+
+                    <p>
+                        That involves observability to collect traces and validation strategy in place so agents don't
+                        mess up in reality.
+                    </p>
+
+                    <hr>
+
+                    <h2>An Open Field for Different People</h2>
+
+                    <p>
+                        It's a very open field for different people. If you're creative, good at programming and coding,
+                        or good at domain or data-specific things—agents are the operational layer. All other things are
+                        equally important:
+                    </p>
+
+                    <ul>
+                        <li>Context and logic—developing skills and decision-making capacity</li>
+                        <li>Using past and historic data</li>
+                        <li>Validation</li>
+                        <li>Making agents learn automatically</li>
+                    </ul>
+
+                    <p>
+                        Those last things are more research or applied research—it's not like frameworks are already
+                        available. Most of the time, you're building from scratch.
+                    </p>
+
+                    <hr>
+
+                    <p style="font-style: italic; color: var(--ink-secondary);">
+                        The field is open. Pick your angle.
+                    </p>
+
+                </div>
+
+                <footer class="post-footer">
+                    <p style="text-align: right; font-style: italic; color: var(--ink-secondary);">
+                        — Prabakaran Chandran<br>
+                        January 15th, 2026
+                    </p>
+                    <div class="post-end-mark">∎</div>
+                </footer>
+            </article>
+        </main>
+    </div>
+
+    <script>
+        const toggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        const saved = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', saved);
+
+        toggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+    </script>
+
+</body>
+
+</html>
